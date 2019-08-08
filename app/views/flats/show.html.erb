@@ -1,0 +1,34 @@
+  <div class="header" id="show_header">
+    <!-- map -->
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="border-1">
+        <h2><%= @flat.name %></h2>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="border-1">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="border-1">
+        <h3>Details</h3>
+        <div class="d-inline-flex">
+          <p class="mr-3">People: <%= @flat.number_of_guests %></p>
+          <p>Price: <%= @flat.price_per_night %></p>
+        </div>
+      </div>
+      <%= link_to 'Edit info', edit_flat_path(@flat), class: "btn btn-outline-primary"  %>
+    </div>
+    <div class="col-4">
+      <div class="booking">
+
+      </div>
+      <div class="social-media">
+
+      </div>
+    </div>
+
+  </div>
+</div>

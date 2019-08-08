@@ -1,0 +1,18 @@
+<div class="container">
+  <%= simple_form_for @flat do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <div class="row mb-3">
+      <div class="col-6">
+        <%= f.label :price_per_night %>
+        <%= f.number_field :price_per_night, class: "mr-3" %>
+      </div>
+      <div class="col-6">
+        <%= f.label :number_of_guests %>
+        <%= f.number_field :number_of_guests %>
+      </div>
+    </div>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>

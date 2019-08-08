@@ -1,0 +1,16 @@
+// Import page-specific CSS files here.
+@import "home";
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+
+#show_header {
+  background-color: gray;
+  height: 300px;
+}
+
+// background-image: url("https://images.unsplash.com/photo-1488375634201-b85b28653a79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2173&q=80");

@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <h2>All our Flats (<%= @flats.count %>)</h2>
+    </div>
+    <% @flats.each do |f| %>
+      <div class="col">
+        <div class="card mt-3" style="height: 23rem; width: 18rem;">
+          <img class="card-img-top" src="https://source.unsplash.com/random/?restaurant" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= f.name %></h5>
+            <p class="card-text">Price per night: $ <%= f.price_per_night %></p>
+            <p class="card-text">Guests: <%= f.number_of_guests %></p>
+            <%= link_to 'More info', flat_path(f)  %>
+            <%= link_to 'Edit', edit_flat_path(f), class: "text-warning ml-3"  %>
+            <%= link_to 'Remove', flat_path(f), method: :delete, data: {confirm: 'Are you sure you want to delete it?'},  class: "text-danger ml-3"  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<!-- https://source.unsplash.com/random/?restaurant -->
